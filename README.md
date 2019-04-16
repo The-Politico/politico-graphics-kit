@@ -33,4 +33,7 @@ class MyChart extends ChartComponent {
 
 ### Snippets
 
-Add this [snippet](snippets/ChartComponent.cson) to Atom.
+Includes [Atom snippets](https://flight-manual.atom.io/using-atom/sections/snippets/) to shortcut building your chart.
+
+- [Chart component](snippets/ChartComponent.cson) demonstrates how to use the base chart component.
+- [Chart container](snippets/ChartContainer.cson) imports your chart component into a React container component, with resize and higher-level state hooks.
