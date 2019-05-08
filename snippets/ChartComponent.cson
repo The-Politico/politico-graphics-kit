@@ -1,9 +1,9 @@
 'POLITICO Chart Component':
   'prefix': 'chart-comp'
   'body': """
-    import { ChartComponent, d3 } from '@politico/graphics-kit';
+    import { BaseChart, d3 } from '@politico/graphics-kit';
 
-    class $1 extends ChartComponent {
+    class $1 extends BaseChart {
       defaultProps = {
         stroke: '#ccc',
         strokeWidth: '2px',

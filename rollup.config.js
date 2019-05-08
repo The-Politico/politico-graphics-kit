@@ -1,5 +1,3 @@
-import path from 'path';
-import glob from 'glob';
 import alias from 'rollup-plugin-alias';
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
@@ -10,19 +8,22 @@ const babelOpts = {
   babelrc: false,
   exclude: 'node_modules/**',
   comments: false,
-  presets: [
-    ['@babel/preset-env', { modules: false }],
-    '@babel/preset-react',
-  ],
-  plugins: [
-    '@babel/proposal-class-properties',
-  ],
+  // presets: [
+  //   ['@babel/preset-env', {
+  //     modules: false,
+  //     targets: { esmodules: true },
+  //   }],
+  //   '@babel/preset-react',
+  // ],
+  // plugins: [
+  //   '@babel/proposal-class-properties',
+  // ],
 };
 
 export default {
   input: 'src/index.js',
   output: {
-    file: pkg.module,
+    file: 'dist/index.mjs',
     format: 'es',
   },
   external: [

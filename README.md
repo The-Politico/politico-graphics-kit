@@ -11,9 +11,9 @@ $ yarn add @politico/graphics-kit
 ### Use
 
 ```javascript
-import { ChartComponent, d3 } from '@politico/graphics-kit';
+import { BaseChart, d3 } from '@politico/graphics-kit';
 
-class MyChart extends ChartComponent {
+class MyChart extends BaseChart {
   defaultProps = {
     stroke: '#ccc',
   }
