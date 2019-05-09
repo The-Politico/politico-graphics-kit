@@ -1,8 +1,8 @@
 {
   "name": "@politico/graphics-kit",
-  "version": "0.0.3",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "version": "0.0.4",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
   "repository": "git@github.com:The-Politico/politico-graphics-kit.git",
   "author": "Jon McClure <jmcclure@politico.com>",
   "license": "MIT",

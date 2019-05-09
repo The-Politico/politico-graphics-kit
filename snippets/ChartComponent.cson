@@ -8,7 +8,6 @@
         stroke: '#ccc',
         strokeWidth: '2px',
         fill: 'steelblue',
-        count: 0,
       }
 
       defaultData = [60, 40, 20]
@@ -55,24 +54,6 @@
           .transition(t)
           .attr('r', 0)
           .remove();
-
-        /**
-         * This code shows how you can set props inside your
-         * chart function, creating an internal state. It also
-         * shows how you can pass a method as a prop from a parent
-         * component.
-         */
-        this.selection().appendSelect('button')
-          .on('click', () => {
-            // Set a prop internally
-            this.props({ count: props.count + 1 });
-            // Call a method passed down as a prop
-            props.sendMessage(`
-              I was a React method called by this chart component.
-              I've been called ${this.props().count} times.
-            `);
-          })
-          .text('Click');
 
         return this;
       }

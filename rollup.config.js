@@ -8,16 +8,9 @@ const babelOpts = {
   babelrc: false,
   exclude: 'node_modules/**',
   comments: false,
-  // presets: [
-  //   ['@babel/preset-env', {
-  //     modules: false,
-  //     targets: { esmodules: true },
-  //   }],
-  //   '@babel/preset-react',
-  // ],
-  // plugins: [
-  //   '@babel/proposal-class-properties',
-  // ],
+  plugins: [
+    '@babel/proposal-class-properties',
+  ],
 };
 
 export default {
