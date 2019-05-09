@@ -2,6 +2,8 @@
 
 # @politico/graphics-kit
 
+[![npm version](https://badge.fury.io/js/%40politico%2Fgraphics-kit.svg)](https://badge.fury.io/js/%40politico%2Fgraphics-kit)
+
 ### Install
 
 ```
