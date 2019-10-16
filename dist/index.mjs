@@ -2,21 +2,6 @@ import * as d3 from 'd3';
 import { selection } from 'd3';
 import merge from 'lodash/merge';
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
 selection.prototype.moveToFront = function () {
   return this.each(function () {
     this.parentNode.appendChild(this);
@@ -42,6 +27,21 @@ selection.prototype.appendSelect = function (el, cls) {
 
   return selected;
 };
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 class ChartError extends Error {
   constructor(constructorName = 'Chart component') {
@@ -86,10 +86,6 @@ class ErrorDataType extends ChartError {
 
 class ChartComponent {
   constructor(selector, props, data) {
-    _defineProperty(this, "defaultProps", {});
-
-    _defineProperty(this, "defaultData", []);
-
     this.selection(selector);
     this.props(props);
     this.data(data);
@@ -106,6 +102,10 @@ class ChartComponent {
     return this;
   }
 
+  get defaultProps() {
+    return {};
+  }
+
   props(obj) {
     if (!obj) return this._props || this.defaultProps;
 
@@ -115,6 +115,10 @@ class ChartComponent {
 
     this._props = merge(this._props || this.defaultProps, obj);
     return this;
+  }
+
+  get defaultData() {
+    return [];
   }
 
   data(arr) {

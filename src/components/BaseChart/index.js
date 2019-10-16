@@ -32,7 +32,9 @@ class ChartComponent {
    * Default props
    * @type {Object}
    */
-  defaultProps = {}
+  get defaultProps() {
+    return {};
+  }
 
   /**
    * Getter/setter for props object
@@ -53,7 +55,9 @@ class ChartComponent {
    * Default data
    * @type {Array}
    */
-  defaultData = []
+  get defaultData() {
+    return [];
+  }
 
   /**
    * Getter/setter for chart data
