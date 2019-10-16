@@ -7,17 +7,25 @@ export default class ChartError extends Error {
 }
 
 export class ErrorDrawMethodUndefined extends ChartError {
-  message = `${this.constructorName} should have a draw method`
+  get message() {
+    return `${this.constructorName} should have a draw method`;
+  }
 }
 
 export class ErrorSelectorType extends ChartError {
-  message = `${this.constructorName} selector should be a DOM Element or selector string`
+  get message() {
+    return `${this.constructorName} selector should be a DOM Element or selector string`;
+  }
 }
 
 export class ErrorPropsType extends ChartError {
-  message = `${this.constructorName} props should be an Object`
+  get message() {
+    return `${this.constructorName} props should be an Object`;
+  }
 }
 
 export class ErrorDataType extends ChartError {
-  message = `${this.constructorName} data should be an Array`
+  get message() {
+    return `${this.constructorName} data should be an Array`;
+  }
 }

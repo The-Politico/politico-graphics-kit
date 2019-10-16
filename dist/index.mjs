@@ -28,21 +28,6 @@ selection.prototype.appendSelect = function (el, cls) {
   return selected;
 };
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
 class ChartError extends Error {
   constructor(constructorName = 'Chart component') {
     super(constructorName);
@@ -52,34 +37,26 @@ class ChartError extends Error {
 
 }
 class ErrorDrawMethodUndefined extends ChartError {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "message", `${this.constructorName} should have a draw method`);
+  get message() {
+    return `${this.constructorName} should have a draw method`;
   }
 
 }
 class ErrorSelectorType extends ChartError {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "message", `${this.constructorName} selector should be a DOM Element or selector string`);
+  get message() {
+    return `${this.constructorName} selector should be a DOM Element or selector string`;
   }
 
 }
 class ErrorPropsType extends ChartError {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "message", `${this.constructorName} props should be an Object`);
+  get message() {
+    return `${this.constructorName} props should be an Object`;
   }
 
 }
 class ErrorDataType extends ChartError {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "message", `${this.constructorName} data should be an Array`);
+  get message() {
+    return `${this.constructorName} data should be an Array`;
   }
 
 }
